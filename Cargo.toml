@@ -3,5 +3,5 @@ members = [
     "chapter_0",
     "chapter_1_1_hello_world",
     "chapter_1_2_hello_cargo",
-    "chapter_2",
+    "chapter_2_1_guessing_game",
 ]
