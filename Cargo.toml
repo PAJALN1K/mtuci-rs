@@ -4,4 +4,12 @@ members = [
     "chapter_1_1_hello_world",
     "chapter_1_2_hello_cargo",
     "chapter_2_1_guessing_game",
+    "chapter_3_1_variables",
+    "chapter_3_2_datatypes",
+    "chapter_3_3_functions",
+    "chapter_3_5_control_flow",
+    "chapter_4_1_ownership",
+    "chapter_4_2_links",
+    "chapter_4_3_slices",
+    "fizzbuzz"
 ]
