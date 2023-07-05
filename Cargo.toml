@@ -8,8 +8,21 @@ members = [
     "chapter_3_2_datatypes",
     "chapter_3_3_functions",
     "chapter_3_5_control_flow",
+    "chapter_3_6_additional_task",
     "chapter_4_1_ownership",
     "chapter_4_2_links",
     "chapter_4_3_slices",
-    "fizzbuzz"
+    "chapter_5_1_struct_creation",
+    "chapter_5_2_struct_example",
+    "chapter_5_3_method_syntax",
+    "chapter_6_1_enum",
+    "chapter_6_2_match",
+    "chapter_6_3_if_let",
+    "homework_2",
+    "fizzbuzz",
+    "lection_3",
 ]
+
+
+
+
