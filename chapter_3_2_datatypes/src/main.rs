@@ -1,7 +1,7 @@
 // Пример 1
-
+//
 // С помощью .parse() мы можем переделать строку в число, например, u32
-
+//
 // fn main() {
 //     let guess: u32 = "42".parse().expect("Not a number!");
 //     println!("{}", guess)

@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello from chapter 1!");
+    println!("Hello from chapter 0!");
 }
