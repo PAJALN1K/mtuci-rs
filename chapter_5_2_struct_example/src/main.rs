@@ -6,19 +6,19 @@
 
 // Вычисление площади прямоугольника, заданного отдельными переменными ширины и высоты
 
-// fn main() {
-//     let width1 = 30;
-//     let height1 = 50;
-//
-//     println!(
-//         "The area of the rectangle is {} square pixels.",
-//         area(width1, height1)
-//     );
-// }
-//
-// fn area(width: u32, height: u32) -> u32 {
-//     width * height
-// }
+fn main() {
+    let width1 = 30;
+    let height1 = 50;
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        area(width1, height1)
+    );
+}
+
+fn area(width: u32, height: u32) -> u32 {
+    width * height
+}
 
 // Проблема данного метода очевидна из сигнатуры area
 // Функция area должна вычислять площадь одного прямоугольника, но функция, которую мы написали,

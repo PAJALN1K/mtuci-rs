@@ -6,6 +6,24 @@
       <sourceFolder url="file://$MODULE_DIR$/chapter_0/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chapter_1_1_hello_world/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chapter_1_2_hello_cargo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_2_1_guessing_game/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_3_1_variables/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_3_2_datatypes/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_3_3_functions/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_3_5_control_flow/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_4_1_ownership/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_4_2_links/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_4_3_slices/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fizzbuzz/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_3_6_additional_task/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_5_1_struct_creation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_5_2_struct_example/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_5_3_method_syntax/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_6_1_enum/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_6_2_match/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_6_3_if_let/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lection_3/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

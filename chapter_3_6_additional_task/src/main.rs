@@ -1,103 +1,103 @@
 // Конвертация температур между значениями по Фаренгейту к Цельсию.
 
-// use::std::io;
-//
-// fn main() {
-//     'temperature_convert: loop {
-//         println!("\n\nTemperature convert");
-//
-//         println!("\nPlease, type a number to choose an operation:");
-//         println!("1 - convert Celsius to Fahrenheit");
-//         println!("2 - convert Fahrenheit to Celsius");
-//
-//         let mut operation_choice: String = String::new();
-//         io::stdin()
-//             .read_line(&mut operation_choice)
-//             .expect("\nError! Line has not been read! \nPlease, try again.\n");
-//
-//         let operation_choice: u32 = match operation_choice.trim().parse() {
-//             Ok(num) => num,
-//             Err(_) => continue,
-//         };
-//
-//         if operation_choice == 1 {
-//             c_to_f();
-//         }
-//         else if operation_choice == 2 {
-//             f_to_c();
-//         }
-//         else {
-//             println!("\nWrong number! \nPlease, type a correct number.");
-//             continue;
-//         }
-//
-//         loop {
-//             println!("\n\nWould you like to continue using this program?");
-//             println!("\nPlease, type a letter to choose an operation:");
-//             println!("[Y] - Yes, I would.");
-//             println!("[N] - No, I'd rather quit.");
-//
-//             let mut operation_choice: String = String::new();
-//             io::stdin()
-//                 .read_line(&mut operation_choice)
-//                 .expect("\nError! \nLine has not been read! \nPlease, try again.\n");
-//
-//             let operation_choice = operation_choice.trim();
-//
-//             if operation_choice == "Y" || operation_choice == "y" {
-//                 continue 'temperature_convert;
-//             }
-//             else if operation_choice == "N" || operation_choice == "n" {
-//                 break 'temperature_convert;
-//             }
-//             println!("\nWrong input! \nPlease, type a correct letter.");
-//         }
-//     }
-// }
-//
-// fn c_to_f() {
-//     loop {
-//         println!("\nInput the temperature in Celsius degree:");
-//
-//         let mut temp_c = String::new();
-//
-//         io::stdin()
-//                 .read_line(&mut temp_c)
-//                 .expect("Error! \nLine has not been read! \nPlease, try again.");
-//
-//         let temp_c: f64 = match temp_c.trim().parse() {
-//             Ok(num) => num,
-//             Err(_) => continue,
-//         };
-//
-//         let temp_f: f64 = temp_c * 9.0 / 5.0 + 32.0;
-//
-//         println!("\nThis temperature in Fahrenheit degree: {}", temp_f);
-//         break;
-//     }
-// }
-//
-// fn f_to_c() {
-//     loop {
-//         println!("\nInput the temperature in Fahrenheit degree:");
-//
-//         let mut temp_f = String::new();
-//
-//         io::stdin()
-//                 .read_line(&mut temp_f)
-//                 .expect("Error! \nLine has not been read! \nPlease, try again.");
-//
-//         let temp_f: f64 = match temp_f.trim().parse() {
-//             Ok(num) => num,
-//             Err(_) => continue,
-//         };
-//
-//         let temp_c: f64 = (temp_f - 32.0) * 5.0 / 9.0 ;
-//
-//         println!("\nThis temperature in Celsius degree: {}", temp_c);
-//         break;
-//     }
-// }
+use::std::io;
+
+fn main() {
+    'temperature_convert: loop {
+        println!("\n\nTemperature convert");
+
+        println!("\nPlease, type a number to choose an operation:");
+        println!("1 - convert Celsius to Fahrenheit");
+        println!("2 - convert Fahrenheit to Celsius");
+
+        let mut operation_choice: String = String::new();
+        io::stdin()
+            .read_line(&mut operation_choice)
+            .expect("\nError! Line has not been read! \nPlease, try again.\n");
+
+        let operation_choice: u32 = match operation_choice.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        if operation_choice == 1 {
+            c_to_f();
+        }
+        else if operation_choice == 2 {
+            f_to_c();
+        }
+        else {
+            println!("\nWrong number! \nPlease, type a correct number.");
+            continue;
+        }
+
+        loop {
+            println!("\n\nWould you like to continue using this program?");
+            println!("\nPlease, type a letter to choose an operation:");
+            println!("[Y] - Yes, I would.");
+            println!("[N] - No, I'd rather quit.");
+
+            let mut operation_choice: String = String::new();
+            io::stdin()
+                .read_line(&mut operation_choice)
+                .expect("\nError! \nLine has not been read! \nPlease, try again.\n");
+
+            let operation_choice = operation_choice.trim();
+
+            if operation_choice == "Y" || operation_choice == "y" {
+                continue 'temperature_convert;
+            }
+            else if operation_choice == "N" || operation_choice == "n" {
+                break 'temperature_convert;
+            }
+            println!("\nWrong input! \nPlease, type a correct letter.");
+        }
+    }
+}
+
+fn c_to_f() {
+    loop {
+        println!("\nInput the temperature in Celsius degree:");
+
+        let mut temp_c = String::new();
+
+        io::stdin()
+                .read_line(&mut temp_c)
+                .expect("Error! \nLine has not been read! \nPlease, try again.");
+
+        let temp_c: f64 = match temp_c.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        let temp_f: f64 = temp_c * 9.0 / 5.0 + 32.0;
+
+        println!("\nThis temperature in Fahrenheit degree: {}", temp_f);
+        break;
+    }
+}
+
+fn f_to_c() {
+    loop {
+        println!("\nInput the temperature in Fahrenheit degree:");
+
+        let mut temp_f = String::new();
+
+        io::stdin()
+                .read_line(&mut temp_f)
+                .expect("Error! \nLine has not been read! \nPlease, try again.");
+
+        let temp_f: f64 = match temp_f.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        let temp_c: f64 = (temp_f - 32.0) * 5.0 / 9.0 ;
+
+        println!("\nThis temperature in Celsius degree: {}", temp_c);
+        break;
+    }
+}
 
 
 
