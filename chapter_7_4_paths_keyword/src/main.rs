@@ -28,19 +28,19 @@ pub fn eat_at_restaurant() {
 // Чтобы решить эту проблему, можно переместить use в модуль customer, или же можно сослаться на псевдоним 
 // в родительском модуле с помощью super::hosting в дочернем модуле customer.
 
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-    }
-}
+// mod front_of_house {
+//     pub mod hosting {
+//         pub fn add_to_waitlist() {}
+//     }
+// }
 
-use crate::front_of_house::hosting;
+// use crate::front_of_house::hosting;
 
-mod customer {
-    pub fn eat_at_restaurant() {
-        hosting::add_to_waitlist();
-    }
-}
+// mod customer {
+//     pub fn eat_at_restaurant() {
+//         hosting::add_to_waitlist();
+//     }
+// }
 
 
 // Пример 3
@@ -51,17 +51,17 @@ mod customer {
 
 // Неидиоматический способ
 
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-    }
-}
+// mod front_of_house {
+//     pub mod hosting {
+//         pub fn add_to_waitlist() {}
+//     }
+// }
 
-use crate::front_of_house::hosting::add_to_waitlist;
+// use crate::front_of_house::hosting::add_to_waitlist;
 
-pub fn eat_at_restaurant() {
-    add_to_waitlist();
-}
+// pub fn eat_at_restaurant() {
+//     add_to_waitlist();
+// }
 
 // Хотя примеры 2 и 3 выполняют одну и ту же задачу, пример 2 является идиоматическим способом 
 // подключения функции в область видимости с помощью use. Подключение родительского модуля функции в область 
@@ -94,16 +94,16 @@ fn main() {
 // видимости используя оператор use - Rust просто не позволяет этого сделать. Пример 5 показывает, как подключить 
 // в область действия два типа с одинаковыми именами Result, но из разных родительских модулей и как на них ссылаться.
 
-use std::fmt;
-use std::io;
+// use std::fmt;
+// use std::io;
 
-fn function1() -> fmt::Result {
-    // --snip--
-}
+// fn function1() -> fmt::Result {
+//     // --snip--
+// }
 
-fn function2() -> io::Result<()> {
-    // --snip--
-}
+// fn function2() -> io::Result<()> {
+//     // --snip--
+// }
 
 // Как видите, использование имени родительских модулей позволяет различать два типа Result. Если бы вместо этого мы 
 // указали use std::fmt::Result и use std::io::Result, мы бы имели два типа Result в одной области видимости, и Rust не 
@@ -116,16 +116,16 @@ fn function2() -> io::Result<()> {
 // после пути можно указать as и новое локальное имя (псевдоним) для типа. Листинг 7-16 показывает как по-другому написать 
 // код из листинга 7-15, путём переименования одного из двух типов Result используя as.
 
-use std::fmt::Result;
-use std::io::Result as IoResult;
+// use std::fmt::Result;
+// use std::io::Result as IoResult;
 
-fn function1() -> Result {
-    // --snip--
-}
+// fn function1() -> Result {
+//     // --snip--
+// }
 
-fn function2() -> IoResult<()> {
-    // --snip--
-}
+// fn function2() -> IoResult<()> {
+//     // --snip--
+// }
 
 
 // Пример 7
@@ -140,17 +140,17 @@ fn function2() -> IoResult<()> {
 
 // Файл: src/lib.rs
 
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-    }
-}
+// mod front_of_house {
+//     pub mod hosting {
+//         pub fn add_to_waitlist() {}
+//     }
+// }
 
-pub use crate::front_of_house::hosting;
+// pub use crate::front_of_house::hosting;
 
-pub fn eat_at_restaurant() {
-    hosting::add_to_waitlist();
-}
+// pub fn eat_at_restaurant() {
+//     hosting::add_to_waitlist();
+// }
 
 // До этого изменения внешний код должен был вызывать функцию add_to_waitlist , используя путь 
 // restaurant::front_of_house::hosting::add_to_waitlist() . Теперь, когда это объявление pub use повторно экспортировало 

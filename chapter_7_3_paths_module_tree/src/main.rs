@@ -27,19 +27,19 @@
 
 // src/lib.rs
 
-mod front_of_house {
-    mod hosting {
-        fn add_to_waitlist() {}
-    }
-}
+// mod front_of_house {
+//     mod hosting {
+//         fn add_to_waitlist() {}
+//     }
+// }
 
-pub fn eat_at_restaurant() {
-    // Absolute path
-    crate::front_of_house::hosting::add_to_waitlist();
+// pub fn eat_at_restaurant() {
+//     // Absolute path
+//     crate::front_of_house::hosting::add_to_waitlist();
 
-    // Relative path
-    front_of_house::hosting::add_to_waitlist();
-}
+//     // Relative path
+//     front_of_house::hosting::add_to_waitlist();
+// }
 
 // При первом вызове функции add_to_waitlist из eat_at_restaurant мы используем абсолютный 
 // путь. Функция add_to_waitlist определена в том же крейте, что и eat_at_restaurant, и это означает, 
@@ -79,19 +79,19 @@ pub fn eat_at_restaurant() {
 
 // src/lib.rs. Не скомпилируется
 
-mod front_of_house {
-    pub mod hosting {
-        fn add_to_waitlist() {}
-    }
-}
+// mod front_of_house {
+//     pub mod hosting {
+//         fn add_to_waitlist() {}
+//     }
+// }
 
-pub fn eat_at_restaurant() {
-    // Absolute path
-    crate::front_of_house::hosting::add_to_waitlist();
+// pub fn eat_at_restaurant() {
+//     // Absolute path
+//     crate::front_of_house::hosting::add_to_waitlist();
 
-    // Relative path
-    front_of_house::hosting::add_to_waitlist();
-}
+//     // Relative path
+//     front_of_house::hosting::add_to_waitlist();
+// }
 
 // Добавление ключевого слова pub перед mod hosting сделало модуль общедоступным. После этого 
 // изменения, если мы можем получить доступ к модулю front_of_house, то мы можем получить доступ 
@@ -103,19 +103,19 @@ pub fn eat_at_restaurant() {
 
 // Добавление ключевого слова pub к mod hosting и к fn add_to_waitlist позволяет нам вызывать функцию из eat_at_restaurant
 
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-    }
-}
+// mod front_of_house {
+//     pub mod hosting {
+//         pub fn add_to_waitlist() {}
+//     }
+// }
 
-pub fn eat_at_restaurant() {
-    // Absolute path
-    crate::front_of_house::hosting::add_to_waitlist();
+// pub fn eat_at_restaurant() {
+//     // Absolute path
+//     crate::front_of_house::hosting::add_to_waitlist();
 
-    // Relative path
-    front_of_house::hosting::add_to_waitlist();
-}
+//     // Relative path
+//     front_of_house::hosting::add_to_waitlist();
+// }
 
 // В случае абсолютного пути мы начинаем с crate, корня дерева модулей нашего крейта. Модуль 
 // front_of_house определён в корневом модуле крейта. Хотя front_of_house не является общедоступным, 
@@ -141,16 +141,16 @@ pub fn eat_at_restaurant() {
 // упростить переупорядочение дерева модулей, чем когда модуль тесно связан с родителем, но родитель может 
 // когда-нибудь быть перемещён в другое место в дереве модулей.
 
-fn deliver_order() {}
+// fn deliver_order() {}
 
-mod back_of_house {
-    fn fix_incorrect_order() {
-        cook_order();
-        super::deliver_order();
-    }
+// mod back_of_house {
+//     fn fix_incorrect_order() {
+//         cook_order();
+//         super::deliver_order();
+//     }
 
-    fn cook_order() {}
-}
+//     fn cook_order() {}
+// }
 
 // Функция fix_incorrect_order вызывает функцию deliver_order, определённую в родительском модуле, указывая 
 // путь к deliver_order, начинающийся с super
@@ -179,33 +179,33 @@ mod back_of_house {
 
 // Файл: src/lib.rs
 
-mod back_of_house {
-    pub struct Breakfast {
-        pub toast: String,
-        seasonal_fruit: String,
-    }
+// mod back_of_house {
+//     pub struct Breakfast {
+//         pub toast: String,
+//         seasonal_fruit: String,
+//     }
 
-    impl Breakfast {
-        pub fn summer(toast: &str) -> Breakfast {
-            Breakfast {
-                toast: String::from(toast),
-                seasonal_fruit: String::from("peaches"),
-            }
-        }
-    }
-}
+//     impl Breakfast {
+//         pub fn summer(toast: &str) -> Breakfast {
+//             Breakfast {
+//                 toast: String::from(toast),
+//                 seasonal_fruit: String::from("peaches"),
+//             }
+//         }
+//     }
+// }
 
-pub fn eat_at_restaurant() {
-    // Order a breakfast in the summer with Rye toast
-    let mut meal = back_of_house::Breakfast::summer("Rye");
-    // Change our mind about what bread we'd like
-    meal.toast = String::from("Wheat");
-    println!("I'd like {} toast please", meal.toast);
+// pub fn eat_at_restaurant() {
+//     // Order a breakfast in the summer with Rye toast
+//     let mut meal = back_of_house::Breakfast::summer("Rye");
+//     // Change our mind about what bread we'd like
+//     meal.toast = String::from("Wheat");
+//     println!("I'd like {} toast please", meal.toast);
 
-    // The next line won't compile if we uncomment it; we're not allowed
-    // to see or modify the seasonal fruit that comes with the meal
-    // meal.seasonal_fruit = String::from("blueberries");
-}
+//     // The next line won't compile if we uncomment it; we're not allowed
+//     // to see or modify the seasonal fruit that comes with the meal
+//     // meal.seasonal_fruit = String::from("blueberries");
+// }
 
 // Также обратите внимание, что поскольку back_of_house::Breakfast имеет приватное поле, то структура должна предоставить 
 // публичную ассоциированную функцию, которая создаёт экземпляр Breakfast (мы назвали её summer). Если Breakfast не имел бы 
@@ -230,3 +230,6 @@ pub fn eat_at_restaurant() {
 // }
 
 
+fn main() {
+    println!("AHAHAHAHHAHAH you're too late, Sonic!\nNow I'm a cringe string slice!");
+}

@@ -12,9 +12,9 @@
 // фактически реализован как обёртка вокруг вектора байтов с некоторыми дополнительными гарантиями, 
 // ограничениями и возможностями.
 
-fn main() {
-    let mut s = String::new();
-};
+// fn main() {
+//     let mut s = String::new();
+// }
 
 
 // Пример 2
@@ -23,33 +23,33 @@ fn main() {
 
 // Метод to_string доступен для любого типа
 
-fn main() {
-    let data = "initial contents";
+// fn main() {
+//     let data = "initial contents";
 
-    let s = data.to_string();
+//     let s = data.to_string();
 
-    // the method also works on a literal directly:
-    let s = "initial contents".to_string();
-};
+//     // the method also works on a literal directly:
+//     let s = "initial contents".to_string();
+// }
 
 
 // Пример 3
 
 // Использование функции String::from для создания экземпляра типа String из строкового литерала
 
-fn main() {
-    let s = String::from("initial contents");
-};
+// fn main() {
+//     let s = String::from("initial contents");
+// }
 
 
 // Пример 4
 
 // Добавление среза строки к String используя метод push_str
 
-fn main() {
-    let mut s = String::from("foo");
-    s.push_str("bar");
-};
+// fn main() {
+//     let mut s = String::from("foo");
+//     s.push_str("bar");
+// }
 
 
 // Пример 5
@@ -66,12 +66,12 @@ fn main() {
 // Если метод push_str стал бы владельцем переменнойs2, мы не смогли бы напечатать его значение в 
 // последней строке. 
 
-fn main() {
-    let mut s1 = String::from("foo");
-    let s2 = "bar";
-    s1.push_str(s2);
-    println!("s2 is {s2}");
-};
+// fn main() {
+//     let mut s1 = String::from("foo");
+//     let s2 = "bar";
+//     s1.push_str(s2);
+//     println!("s2 is {s2}");
+// }
 
 
 // Пример 7
@@ -80,21 +80,21 @@ fn main() {
 
 // В результате s будет содержать lol.
 
-fn main() {
-    let mut s = String::from("lo");
-    s.push('l');
-};
+// fn main() {
+//     let mut s = String::from("lo");
+//     s.push('l');
+// }
 
 
 // Пример 8
 
 // Использование оператора + для объединения двух значений String в новое String значение
 
-fn main() {
-    let s1 = String::from("Hello, ");
-    let s2 = String::from("world!");
-    let s3 = s1 + &s2; // note s1 has been moved here and can no longer be used
-};
+// fn main() {
+//     let s1 = String::from("Hello, ");
+//     let s2 = String::from("world!");
+//     let s3 = s1 + &s2; // note s1 has been moved here and can no longer be used
+// }
 
 // Строка s3 будет содержать Hello, world!. Причина того, что s1 после добавления больше недействительна и 
 // причина, по которой мы использовали ссылку на s2 имеют отношение к сигнатуре вызываемого метода при 
@@ -115,13 +115,13 @@ fn main() {
 
 // Для более сложного комбинирования строк можно использовать макрос format!:
 
-fn main() {
-    let s1 = String::from("tic");
-    let s2 = String::from("tac");
-    let s3 = String::from("toe");
+// fn main() {
+//     let s1 = String::from("tic");
+//     let s2 = String::from("tac");
+//     let s3 = String::from("toe");
 
-    let s = format!("{s1}-{s2}-{s3}");
-};
+//     let s = format!("{s1}-{s2}-{s3}");
+// }
 
 
 // Пример 10
@@ -135,10 +135,10 @@ fn main() {
 // Хранение строк в Rust происходит таким замысловатым образом, что в целом, ни индексы, ни срезы к ним
 // применять не стоит.
 
-fn main() {
-    let s1 = String::from("hello");
-    let h = s1[0];
-};
+// fn main() {
+//     let s1 = String::from("hello");
+//     let h = s1[0];
+// }
 
 
 // Пример 11
@@ -149,11 +149,11 @@ fn main() {
 // З
 // д
 
-fn main() {
-    for c in "Зд".chars() {
-        println!("{}", c);
-    }
-};
+// fn main() {
+//     for c in "Зд".chars() {
+//         println!("{}", c);
+//     }
+// }
 
 
 // Пример 12
@@ -166,11 +166,11 @@ fn main() {
 // 208
 // 180
 
-fn main() {
-    for b in "Зд".bytes() {
-        println!("{}", b);
-    }
-};
+// fn main() {
+//     for b in "Зд".bytes() {
+//         println!("{}", b);
+//     }
+// }
 
 
 // Пример 13
@@ -178,11 +178,11 @@ fn main() {
 // Лучший способ работать с фрагментами строк - чётко указать, нужны ли вам символы или байты. Для отдельных 
 // скалярных значений в Юникоде используйте метод chars.
 
-fn main() {
-    for c in "Зд".chars() {
-        println!("{}", c);
-    }
-};
+// fn main() {
+//     for c in "Зд".chars() {
+//         println!("{}", c);
+//     }
+// }
 
 
 // Пример 11
@@ -194,4 +194,4 @@ fn main() {
     for c in "Зд".chars() {
         println!("{}", c);
     }
-};
+}

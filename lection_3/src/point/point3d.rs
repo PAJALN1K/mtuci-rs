@@ -11,13 +11,13 @@ impl Point3d {
         Point3d { x, y, z }
     }
 
-    pub fn add(self) -> i32 {
-        self.x + self.y +self.z
-    }
+    // pub fn add(self) -> i32 {
+    //     self.x + self.y +self.z
+    // }
 }
 
 impl Point for Point3d {
     fn length(&self) -> f64 {
-        ((self.x.pow(2) as f64) + (self.y.pow(2) as f64)).sqrt()
+        ((self.x.pow(2) as f64) + (self.y.pow(2) as f64) + (self.z.pow(2) as f64)).sqrt()
     }
 }

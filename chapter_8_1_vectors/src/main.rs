@@ -23,9 +23,9 @@
 // Векторы реализованы с использованием обобщённых типов. А пока знайте, что тип Vec<T>, предоставляемый 
 // стандартной библиотекой, может хранить любой тип.
 
-fn main() {
-    let v: Vec<i32> = Vec::new();
-};
+// fn main() {
+//     let v: Vec<i32> = Vec::new();
+// }
 
 
 // Пример 2
@@ -33,23 +33,23 @@ fn main() {
 // Поскольку мы указали начальные значения типа i32, Rust может сделать вывод, что тип переменной v это 
 // Vec<i32> и аннотация типа здесь не нужна. Далее мы посмотрим как изменять вектор.
 
-fn main() {
-    let v = vec![1, 2, 3];
-};
+// fn main() {
+//     let v = vec![1, 2, 3];
+// }
 
 
 // Пример 3
 
 // Использование метода push для добавления значений в вектор
 
-fn main() {
-    let mut v = Vec::new();
+// fn main() {
+//     let mut v = Vec::new();
 
-    v.push(5);
-    v.push(6);
-    v.push(7);
-    v.push(8);
-};
+//     v.push(5);
+//     v.push(6);
+//     v.push(7);
+//     v.push(8);
+// }
 
 
 // Пример 4
@@ -59,18 +59,18 @@ fn main() {
 // Когда мы используем метод get содержащего индекс, переданный в качестве аргумента, мы получаем 
 // тип Option<&T>, который мы можем проверить с помощью match.
 
-fn main() {
-    let v = vec![1, 2, 3, 4, 5];
+// fn main() {
+//     let v = vec![1, 2, 3, 4, 5];
 
-    let third: &i32 = &v[2];
-    println!("The third element is {third}");
+//     let third: &i32 = &v[2];
+//     println!("The third element is {third}");
 
-    let third: Option<&i32> = v.get(2);
-    match third {
-        Some(third) => println!("The third element is {third}"),
-        None => println!("There is no third element."),
-    }
-};
+//     let third: Option<&i32> = v.get(2);
+//     match third {
+//         Some(third) => println!("The third element is {third}"),
+//         None => println!("There is no third element."),
+//     }
+// }
 
 
 // Пример 5
@@ -81,12 +81,12 @@ fn main() {
 
 // [Вызовет панику]
 
-fn main() {
-    let v = vec![1, 2, 3, 4, 5];
+// fn main() {
+//     let v = vec![1, 2, 3, 4, 5];
 
-    let does_not_exist = &v[100];
-    let does_not_exist = v.get(100);
-}
+//     let does_not_exist = &v[100];
+//     let does_not_exist = v.get(100);
+// }
 
 // Когда мы запускаем этот код, первая строка с &v[100] вызовет панику программы, потому что происходит 
 // попытка получить ссылку на несуществующий элемент. Такой подход лучше всего использовать, когда вы хотите, 
@@ -106,15 +106,15 @@ fn main() {
 // применяется в примере 6, где мы храним неизменяемую ссылку на первый элемент вектора и затем пытаемся 
 // добавить элемент в конец вектора. Данная программа не будет работать.
 
-fn main() {
-    let mut v = vec![1, 2, 3, 4, 5];
+// fn main() {
+//     let mut v = vec![1, 2, 3, 4, 5];
 
-    let first = &v[0];
+//     let first = &v[0];
 
-    v.push(6);
+//     v.push(6);
 
-    println!("The first element is: {first}");
-};
+//     println!("The first element is: {first}");
+// }
 
 // Эта ошибка возникает из-за особенности того, как работают векторы: поскольку векторы размещают значения 
 // в памяти друг за другом, добавление нового элемента в конец вектора может потребовать выделения новой 
@@ -134,7 +134,7 @@ fn main() {
         println!("{i}");
     }
 
-};
+}
 
 
 // Пример 8
@@ -145,12 +145,12 @@ fn main() {
 // разыменования ссылки * для получения значения по ссылке в переменной i прежде чем использовать 
 // оператор +=.
 
-fn main() {
-    let mut v = vec![100, 32, 57];
-    for i in &mut v {
-        *i += 50;
-    }
-};
+// fn main() {
+//     let mut v = vec![100, 32, 57];
+//     for i in &mut v {
+//         *i += 50;
+//     }
+// }
 
 // Перебор вектора, будь то неизменяемый или изменяемый, безопасен из-за правил проверки заимствования. 
 // Если бы мы попытались вставить или удалить элементы в телах цикла for в листингах 8-7 и 8-8, мы бы 
@@ -169,34 +169,32 @@ fn main() {
 // куче потребуется для хранения каждого элемента. Мы также должны чётко указать, какие типы разрешены в 
 // этом векторе.
 
-fn main() {
-    enum SpreadsheetCell {
-        Int(i32),
-        Float(f64),
-        Text(String),
-    }
+// fn main() {
+//     enum SpreadsheetCell {
+//         Int(i32),
+//         Float(f64),
+//         Text(String),
+//     }
 
-    let row = vec![
-        SpreadsheetCell::Int(3),
-        SpreadsheetCell::Text(String::from("blue")),
-        SpreadsheetCell::Float(10.12),
-    ];
-};
+//     let row = vec![
+//         SpreadsheetCell::Int(3),
+//         SpreadsheetCell::Text(String::from("blue")),
+//         SpreadsheetCell::Float(10.12),
+//     ];
+// }
 
 
 // Пример 10
 
 // Подобно структурам struct, вектор высвобождает свою память когда выходит из области видимости
 
+// fn main() {
+//     {
+//         let v = vec![1, 2, 3, 4];
 
-
-fn main() {
-    {
-        let v = vec![1, 2, 3, 4];
-
-        // do stuff with v
-    } // <- v goes out of scope and is freed here
-}
+//         // do stuff with v
+//     } // <- v goes out of scope and is freed here
+// }
 
 
 // Пример 11
@@ -207,11 +205,11 @@ fn main() {
 // значений, которые он содержит. Средство проверки заимствования гарантирует, что любые ссылки на содержимое 
 // вектора используются только тогда, когда сам вектор действителен.
 
-fn main() {
-    let mut v = Vec::new();
+// fn main() {
+//     let mut v = Vec::new();
 
-    v.push(5);
-    v.push(6);
-    v.push(7);
-    v.push(8);
-};
+//     v.push(5);
+//     v.push(6);
+//     v.push(7);
+//     v.push(8);
+// }

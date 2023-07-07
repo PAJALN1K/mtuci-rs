@@ -18,14 +18,14 @@
 // Подобно векторам, хеш-карты хранят свои данные в куче. Как и векторы, HashMap однородны: все ключи 
 // должны иметь одинаковый тип и все значения должны иметь тоже одинаковый тип.
 
-fn main() {
-    use std::collections::HashMap;
+// fn main() {
+//     use std::collections::HashMap;
 
-    let mut scores = HashMap::new();
+//     let mut scores = HashMap::new();
 
-    scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Yellow"), 50);
-};
+//     scores.insert(String::from("Blue"), 10);
+//     scores.insert(String::from("Yellow"), 50);
+// }
 
 
 // Пример 2
@@ -34,21 +34,17 @@ fn main() {
 
 // Метод get возвращает Option<&V>; если для какого-то ключа нет значения в HashMap, get вернёт None.
 
-// Этот код будет печатать каждую пару в произвольном порядке:
-// Yellow: 50
-// Blue: 10
+// fn main() {
+//     use std::collections::HashMap;
 
-fn main() {
-    use std::collections::HashMap;
+//     let mut scores = HashMap::new();
 
-    let mut scores = HashMap::new();
+//     scores.insert(String::from("Blue"), 10);
+//     scores.insert(String::from("Yellow"), 50);
 
-    scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Yellow"), 50);
-
-    let team_name = String::from("Blue");
-    let score = scores.get(&team_name).copied().unwrap_or(0);
-};
+//     let team_name = String::from("Blue");
+//     let score = scores.get(&team_name).copied().unwrap_or(0);
+// }
 
 
 // Пример 3
@@ -56,18 +52,22 @@ fn main() {
 // Мы можем перебирать каждую пару ключ/значение в HashMap таким же образом, как мы делали с векторами, 
 // используя цикл for:
 
-fn main() {
-    use std::collections::HashMap;
+// Этот код будет печатать каждую пару в произвольном порядке:
+// Yellow: 50
+// Blue: 10
 
-    let mut scores = HashMap::new();
+// fn main() {
+//     use std::collections::HashMap;
 
-    scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Yellow"), 50);
+//     let mut scores = HashMap::new();
 
-    for (key, value) in &scores {
-        println!("{key}: {value}");
-    }
-};
+//     scores.insert(String::from("Blue"), 10);
+//     scores.insert(String::from("Yellow"), 50);
+
+//     for (key, value) in &scores {
+//         println!("{key}: {value}");
+//     }
+// }
 
 
 // Пример 4
@@ -78,17 +78,17 @@ fn main() {
 // Мы не можем использовать переменные field_name и field_value после того, как их значения были 
 // перемещены в HashMap вызовом метода insert.
 
-fn main() {
-    use std::collections::HashMap;
+// fn main() {
+//     use std::collections::HashMap;
 
-    let field_name = String::from("Favorite color");
-    let field_value = String::from("Blue");
+//     let field_name = String::from("Favorite color");
+//     let field_value = String::from("Blue");
 
-    let mut map = HashMap::new();
-    map.insert(field_name, field_value);
-    // field_name and field_value are invalid at this point, try using them and
-    // see what compiler error you get!
-};
+//     let mut map = HashMap::new();
+//     map.insert(field_name, field_value);
+//     // field_name and field_value are invalid at this point, try using them and
+//     // see what compiler error you get!
+// }
 
 
 // Обновление данных в HashMap
@@ -105,16 +105,16 @@ fn main() {
 // одну пару ключ/значение, потому что мы вставляем значения для одного и того же ключа - ключа команды 
 // "Blue".
 
-fn main() {
-    use std::collections::HashMap;
+// fn main() {
+//     use std::collections::HashMap;
 
-    let mut scores = HashMap::new();
+//     let mut scores = HashMap::new();
 
-    scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Blue"), 25);
+//     scores.insert(String::from("Blue"), 10);
+//     scores.insert(String::from("Blue"), 25);
 
-    println!("{:?}", scores);
-};
+//     println!("{:?}", scores);
+// }
 
 
 // Пример 6
@@ -134,17 +134,17 @@ fn main() {
 // ключа внутри варианта перечисления Entry, когда этот ключ существует, а если его нет, то вставлять 
 // параметр в качестве нового значения этого ключа и возвращать изменяемую ссылку на новое значение. 
 
-fn main() {
-    use std::collections::HashMap;
+// fn main() {
+//     use std::collections::HashMap;
 
-    let mut scores = HashMap::new();
-    scores.insert(String::from("Blue"), 10);
+//     let mut scores = HashMap::new();
+//     scores.insert(String::from("Blue"), 10);
 
-    scores.entry(String::from("Yellow")).or_insert(50);
-    scores.entry(String::from("Blue")).or_insert(50);
+//     scores.entry(String::from("Yellow")).or_insert(50);
+//     scores.entry(String::from("Blue")).or_insert(50);
 
-    println!("{:?}", scores);
-};
+//     println!("{:?}", scores);
+// }
 
 
 // Пример 7
@@ -166,4 +166,4 @@ fn main() {
     }
 
     println!("{:?}", map);
-};
+}

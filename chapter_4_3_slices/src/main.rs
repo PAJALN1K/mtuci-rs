@@ -111,14 +111,14 @@
 //     let slice = &s[3..];
 // }
 
-fn main() {
-    let s = String::from("hello");
+// fn main() {
+//     let s = String::from("hello");
 
-    let len = s.len();
+//     let len = s.len();
 
-    let slice = &s[0..len];
-    let slice = &s[..];
-}
+//     let slice = &s[0..len];
+//     let slice = &s[..];
+// }
 
 
 // Пример 6
@@ -132,3 +132,7 @@ fn main() {
 //
 // assert_eq!(slice, &[2, 3]);
 // }
+
+fn main() {
+    println!("AHAHAHAHHAHAH you're too late, Sonic!\nNow I'm a cringe string slice!");
+}
