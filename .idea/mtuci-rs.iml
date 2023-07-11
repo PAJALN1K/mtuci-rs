@@ -24,6 +24,18 @@
       <sourceFolder url="file://$MODULE_DIR$/chapter_6_3_if_let/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/homework_2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lection_3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_7_1_package_and_crate/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_7_2_defining_modules/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_7_3_paths_module_tree/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_7_4_paths_keyword/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_7_5_separating_modules/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_8_1_vectors/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_8_2_strings/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_8_3_hashmap/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_8_4_additional_task_1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_8_5_additional_task_2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_8_6_additional_task_3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lection_4/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

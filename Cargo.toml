@@ -29,9 +29,17 @@ members = [
     "chapter_8_4_additional_task_1",
     "chapter_8_5_additional_task_2",
     "chapter_8_6_additional_task_3",
+    "chapter_9_1_panic_unrecoverable",
+    "chapter_9_2_recoverable",
+    "chapter_9_3_panic_or_not",
+    "chapter_10_1_generic_data_types",
+    "chapter_10_2_traits",
+    "chapter_10_3_lifetimes",
     "homework_2",
+    "homework_4",
     "fizzbuzz",
     "lection_3",
+    "lection_4",
 ]
 
 

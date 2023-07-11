@@ -154,3 +154,14 @@
 fn main() {
     println!("AHAHAHAHHAHAH you're too late, Sonic!\nNow I'm a cringe string slice!");
 }
+
+
+// Пример 6
+
+// Слишком хороший, чтобы не указать
+
+// match value {
+//     x if x < 0 => Err(CreationError::Negative),
+//     x if x == 0 => Err(CreationError::Zero),
+//     x => Ok(PositiveNonzeroInteger(x as u64)),
+// }
