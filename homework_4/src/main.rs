@@ -23,7 +23,7 @@ fn main() {
 impl<T> Victor<T> {
     fn new() -> Victor<T> {
         Victor {
-            core: (), 
+            core: ( ), 
             len: 0, 
             capacity: 0,
         }

@@ -14,29 +14,29 @@
 // В сигнатуре area мы используем &self вместо rectangle: &Rectangle.
 // &self на самом деле является сокращением от self: &Self.
 
-#[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
+// #[derive(Debug)]
+// struct Rectangle {
+//     width: u32,
+//     height: u32,
+// }
 
-impl Rectangle {
-    fn area(&self) -> u32 {
-        self.width * self.height
-    }
-}
+// impl Rectangle {
+//     fn area(&self) -> u32 {
+//         self.width * self.height
+//     }
+// }
 
-fn main() {
-    let rect1 = Rectangle {
-        width: 30,
-        height: 50,
-    };
+// fn main() {
+//     let rect1 = Rectangle {
+//         width: 30,
+//         height: 50,
+//     };
 
-    println!(
-        "The area of the rectangle is {} square pixels.",
-        rect1.area()
-    );
-}
+//     println!(
+//         "The area of the rectangle is {} square pixels.",
+//         rect1.area()
+//     );
+// }
 
 
 // Пример 2
@@ -103,14 +103,40 @@ fn main() {
 // функции, которые не имеют self в качестве первого параметра (и, следовательно, не являются
 // методами), потому что им не нужен экземпляр типа для работы.
 
-// impl Rectangle {
-//     fn square(size: u32) -> Self {
-//         Self {
-//             width: size,
-//             height: size,
-//         }
-//     }
-// }
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    let rect2 = Rectangle::square(20);
+
+    println!(
+        "rect 1 {:?}",
+        rect1
+    );
+
+    println!(
+        "rect 2 {:?}",
+        rect2
+    );
+}
+
 
 
 // Пример 5
