@@ -35,13 +35,34 @@ members = [
     "chapter_10_1_generic_data_types",
     "chapter_10_2_traits",
     "chapter_10_3_lifetimes",
+    "chapter_11_1_how_to_test",
+    "chapter_11_2_control_of_how_tests_are_run",
+    "chapter_11_3_test_organization",
+    "chapter_12_1_accepting_cmd_line",
+    "chapter_12_2_reading_file",
+    "chapter_12_3_refactoring_for_modularity_and_errors",
+    "chapter_12_4_developing_lib_functionality",
+    "chapter_12_5_working_with_variables",
+    "chapter_12_6_writing_error_msgs",
+    "chapter_13_1_closures",
+    "chapter_13_2_processing_with_iterators",
+    "chapter_13_3_improving_io_project",
+    "chapter_13_4_loops_vs_iters",
+    "chapter_15_1_using_box_t",
+    "chapter_15_2_sp_like_references",
+    "chapter_15_3_runing_code_on_cleanup",
+    "chapter_15_4_Rc_T",
+    "chapter_15_5_RefCell_T",
+    "chapter_15_6_reference_cycles",
+
+    "fizzbuzz",
     "homework_2",
     "homework_4",
-    "fizzbuzz",
     "lection_3",
     "lection_4",
+    "lection_5",
+
+    "GTD_todo_app",
+
+    "app_modifier"
 ]
-
-
-
-
