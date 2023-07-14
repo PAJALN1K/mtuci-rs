@@ -1,10 +1,8 @@
 [package]
-name = "chapter_8_4_additional_task_1"
+name = "chapter_12_5_working_with_variables"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-app_modifier = { path = "../app_modifier" }
-

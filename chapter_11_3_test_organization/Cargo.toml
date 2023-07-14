@@ -1,10 +1,9 @@
 [package]
-name = "chapter_8_4_additional_task_1"
+name = "chapter_11_3_test_organization"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-app_modifier = { path = "../app_modifier" }
-
+chapter_11_2_control_of_how_tests_are_run = { path = "../chapter_11_2_control_of_how_tests_are_run" }

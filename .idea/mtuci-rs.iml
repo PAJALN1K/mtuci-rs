@@ -36,6 +36,17 @@
       <sourceFolder url="file://$MODULE_DIR$/chapter_8_5_additional_task_2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chapter_8_6_additional_task_3/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lection_4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GTD_todo_app/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app_modifier/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_10_1_generic_data_types/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_10_2_traits/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_10_3_lifetimes/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_12_6_writing_error_msgs/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_9_1_panic_unrecoverable/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_9_2_recoverable/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_9_3_panic_or_not/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/homework_4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lection_5/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
