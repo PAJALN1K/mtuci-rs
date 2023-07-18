@@ -58,9 +58,22 @@ members = [
     "fizzbuzz",
     "homework_2",
     "homework_4",
+
+    "tokio_hello_tokio",
+    "tokio_spawning",
+    "tokio_shared_state",
+    "tokio_channels",
+    "tokio_io",
+    "tokio_framing",
+    "tokio_async_in_depth",
+    "tokio_select",
+    "tokio_streams",
+
     "lection_3",
     "lection_4",
     "lection_5",
+    "lection_6",
+    "lection_6_2",
 
     "GTD_todo_app",
 
