@@ -99,17 +99,17 @@ fn main() {}
 
 // Вызов hello со ссылкой на значение MyBox<String>, которое работает из-за разыменованного приведения
 
-fn main() {
-    let m = MyBox::new(String::from("Rust"));
-    hello(&m);
-}
+// fn main() {
+//     let m = MyBox::new(String::from("Rust"));
+//     hello(&m);
+// }
 
 
 // Пример 8
 
 // Код, который нам пришлось бы написать, если бы в Rust не было разыменованного приведения ссылок
 
-fn main() {
-    let m = MyBox::new(String::from("Rust"));
-    hello(&(*m)[..]);
-}
+// fn main() {
+//     let m = MyBox::new(String::from("Rust"));
+//     hello(&(*m)[..]);
+// }

@@ -82,11 +82,11 @@
 // Вызов адаптера итератора map для создания нового итератора.
 // Этот код не приводит к желаемому поведению.
 
-fn main() {
-    let v1: Vec<i32> = vec![1, 2, 3];
+// fn main() {
+//     let v1: Vec<i32> = vec![1, 2, 3];
 
-    v1.iter().map(|x| x + 1);
-}
+//     v1.iter().map(|x| x + 1);
+// }
 
 
 // Пример 7
@@ -107,51 +107,51 @@ fn main() {
 
 // Использование метода filter с замыканием, фиксирующим shoe_size
 
-#[derive(PartialEq, Debug)]
-struct Shoe {
-    size: u32,
-    style: String,
-}
+// #[derive(PartialEq, Debug)]
+// struct Shoe {
+//     size: u32,
+//     style: String,
+// }
 
-fn shoes_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
-    shoes.into_iter().filter(|s| s.size == shoe_size).collect()
-}
+// fn shoes_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
+//     shoes.into_iter().filter(|s| s.size == shoe_size).collect()
+// }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
 
-    #[test]
-    fn filters_by_size() {
-        let shoes = vec![
-            Shoe {
-                size: 10,
-                style: String::from("sneaker"),
-            },
-            Shoe {
-                size: 13,
-                style: String::from("sandal"),
-            },
-            Shoe {
-                size: 10,
-                style: String::from("boot"),
-            },
-        ];
+//     #[test]
+//     fn filters_by_size() {
+//         let shoes = vec![
+//             Shoe {
+//                 size: 10,
+//                 style: String::from("sneaker"),
+//             },
+//             Shoe {
+//                 size: 13,
+//                 style: String::from("sandal"),
+//             },
+//             Shoe {
+//                 size: 10,
+//                 style: String::from("boot"),
+//             },
+//         ];
 
-        let in_my_size = shoes_in_size(shoes, 10);
+//         let in_my_size = shoes_in_size(shoes, 10);
 
-        assert_eq!(
-            in_my_size,
-            vec![
-                Shoe {
-                    size: 10,
-                    style: String::from("sneaker")
-                },
-                Shoe {
-                    size: 10,
-                    style: String::from("boot")
-                },
-            ]
-        );
-    }
-}
+//         assert_eq!(
+//             in_my_size,
+//             vec![
+//                 Shoe {
+//                     size: 10,
+//                     style: String::from("sneaker")
+//                 },
+//                 Shoe {
+//                     size: 10,
+//                     style: String::from("boot")
+//                 },
+//             ]
+//         );
+//     }
+// }

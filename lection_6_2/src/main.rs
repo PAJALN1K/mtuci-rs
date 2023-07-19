@@ -1,25 +1,25 @@
 // Пример 1
 
-use std::thread::yield_now;
+// use std::thread::yield_now;
 
-use tokio::io::{AsyncReadExt, AsyncWriteExt};
-use tokio::net::TcpListener;
-use tokio::sync::mpsc;
-use tokio::sync::oneshot;
+// use tokio::io::{AsyncReadExt, AsyncWriteExt};
+// use tokio::net::TcpListener;
+// use tokio::sync::mpsc;
+// use tokio::sync::oneshot;
 
-#[tokio::main]
-async fn main() {
-    let mut client = TcpListener::bind("127.0.0.1:8080").await.unwrap();
+// #[tokio::main]
+// async fn main() {
+//     let mut client = TcpListener::bind("127.0.0.1:8080").await.unwrap();
     
-    tokio::spawn(async move {
-        loop {
-            let (mut socket, _) = client.accept().await.unwrap();
-            let buf = [0u16, 1024];
-            let n = socket.read(&buf).await.unwrap();
-            yield_now();
-        }
-    });
-}
+//     tokio::spawn(async move {
+//         loop {
+//             let (mut socket, _) = client.accept().await.unwrap();
+//             let buf = [0u16, 1024];
+//             let n = socket.read(&buf).await.unwrap();
+//             yield_now();
+//         }
+//     });
+// }
 
 
 // Пример 2
@@ -34,10 +34,10 @@ async fn main() {
 //     let (tx, mut rx) = mpsc::channel::<i32>(5);
 //     let (tx2, mut rx2) = mpsc::channel::<String>(5);
 
-//     // tokio::select! {
-//     //     val1 = rx.recv() => println!("Recieved from 1st channel {}", val1.unwrap())
-//     //     val2 = rx2.recv() => println!("Recieved from 2nd channel {}", val2.unwrap())
-//     // }
+//     tokio::select! {
+//         val1 = rx.recv() => println!("Recieved from 1st channel {}", val1.unwrap())
+//         val2 = rx2.recv() => println!("Recieved from 2nd channel {}", val2.unwrap())
+//     }
 
 //     let res = tokio::join!(rx.recv(), rx2.recv());
 // }
@@ -60,3 +60,7 @@ async fn main() {
 
 // у тудушки должна быть графика (человеческая)
 // необходимо, чтобы можно было добавлять и удалять туду, сортировать их между собой, отмечать, как выполненную и т.д.
+
+fn main() {
+    println!("AHAHAHAHHAHAH you're too late, Sonic!\nNow I'm a cringe string slice!");
+}

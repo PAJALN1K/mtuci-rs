@@ -82,22 +82,29 @@
 // }
 
 
-use std::rc::Rc;
-use std::cell::RefCell;
 
-fn main() {
-    let mut vec = vec![1i32, 2, 3, 4];
-    let v = Rc::new(RefCell::new(vec![1,2,3,4]));
-    let mut a = A { vec: v.clone() };
-}
 
-struct A {
-    vec: Rc<Vec<i32>>,
-}
+// use std::rc::Rc;
+// use std::cell::RefCell;
 
-struct MyRc {
-    counter: usize,
-    pointer: *const i32,
-}
+// fn main() {
+//     let mut vec = vec![1i32, 2, 3, 4];
+//     let v = Rc::new(RefCell::new(vec![1,2,3,4]));
+//     let mut a = A { vec: v.clone() };
+// }
+
+// struct A {
+//     vec: Rc<Vec<i32>>,
+// }
+
+// struct MyRc {
+//     counter: usize,
+//     pointer: *const i32,
+// }
 
 // до 15 включительно
+
+
+fn main() {
+    println!("AHAHAHAHHAHAH you're too late, Sonic!\nNow I'm a cringe string slice!");
+}

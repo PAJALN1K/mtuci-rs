@@ -52,23 +52,23 @@
 // Вызов std::mem::drop для принудительного удаления значения до того, как оно выйдет из 
 // области видимости
 
-// struct CustomSmartPointer {
-//     data: String,
-// }
+struct CustomSmartPointer {
+    data: String,
+}
 
-// impl Drop for CustomSmartPointer {
-//     fn drop(&mut self) {
-//         println!("Dropping CustomSmartPointer with data `{}`!", self.data);
-//     }
-// }
+impl Drop for CustomSmartPointer {
+    fn drop(&mut self) {
+        println!("Dropping CustomSmartPointer with data `{}`!", self.data);
+    }
+}
 
-// fn main() {
-//     let c = CustomSmartPointer {
-//         data: String::from("some data"),
-//     };
-//     println!("CustomSmartPointer created.");
-//     drop(c);
-//     println!("CustomSmartPointer dropped before the end of main.");
-// }
+fn main() {
+    let c = CustomSmartPointer {
+        data: String::from("some data"),
+    };
+    println!("CustomSmartPointer created.");
+    drop(c);
+    println!("CustomSmartPointer dropped before the end of main.");
+}
 
 
